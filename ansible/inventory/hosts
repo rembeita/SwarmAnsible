@@ -8,9 +8,9 @@ worker1 ansible_host=34.205.4.171 ansible_ssh_user=centos ansible_ssh_private_ke
 manager
 
 # List your node(s): swarm node
-[swarm-nodes]
+[swarm-workers]
 worker1
 
-[swarm]
+[swarm:children]
 swarm-managers
-swarm-nodes
+swarm-workers

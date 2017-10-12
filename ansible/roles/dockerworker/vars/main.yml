@@ -1,0 +1,7 @@
+---
+# vars file for dockermanager
+token: "{{ hostvars['manager']['swarm_manager_token']['stdout'] }}"
+tokennode: "{{ hostvars.manager.bootstrap_first_node.stdout.split('\n')[5].split(' ')[5] }}"
+#hostmanager: "{{ hostvars.manager.bootstrap_first_node.stdout.split('\n')[5].split(' ')[6] }}"
+hostmanager: "{{ hostvars.manager.bootstrap_first_node.stdout.split('\n')[6] }}"
+
