@@ -26,35 +26,35 @@
   yum: pkg=docker-engine state=present
   tags: [docker]
 
-- name: install rhel sysv docker.service init script
-  become: true
-  template:
-    src: docker.service.j2
-    dest: /etc/init.d/docker.service
-    owner: root
-    group: root
-    mode: 0640
-  tags: [docker]
+#- name: install rhel sysv docker.service init script
+#  become: true
+#  template:
+#    src: docker.service.j2
+#    dest: /etc/init.d/docker.service
+#    owner: root
+#    group: root
+#    mode: 0640
+#  tags: [docker]
 
-- name: install rhel sysv docker.service sysconfig
-  become: true
-  template:
-    src: docker.service.j2
-    dest: /etc/sysconfig/docker.service
-    owner: root
-    group: root
-    mode: 0640
-  tags: [docker]
-
-- name: install rhel sysv docker.service systemd
-  become: true
-  template:
-    src: docker.service.j2
-    dest: /usr/lib/systemd/system
-    owner: root
-    group: root
-    mode: 0640
-  tags: [docker]
+#- name: install rhel sysv docker.service sysconfig
+#  become: true
+#  template:
+#    src: docker.service.j2
+#    dest: /etc/sysconfig/docker.service
+#    owner: root
+#    group: root
+#    mode: 0640
+#  tags: [docker]
+#
+#- name: install rhel sysv docker.service systemd
+#  become: true
+#  template:
+#    src: docker.service.j2
+#    dest: /usr/lib/systemd/system
+#    owner: root
+#    group: root
+#    mode: 0640
+#  tags: [docker]
 
 - name: enable sysv dockerd service
   become: true

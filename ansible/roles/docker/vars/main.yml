@@ -1,2 +1,0 @@
----
-hostmanager: "{{ hostvars.manager.ansible_host }}"
