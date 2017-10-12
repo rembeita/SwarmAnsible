@@ -10,3 +10,7 @@ manager
 # List your node(s): swarm node
 [swarm-nodes]
 worker1
+
+[swarm]
+swarm-managers
+swarm-nodes
